@@ -43,6 +43,7 @@ Getting started
     `<script type="text-javascript" src="path_to_exportJS_dir/export.js"></script>`
     
 Ex:
+    
     `<script type="text-javascript" src="http://building-export.ex.com/assets/js/ExportJS/export.js"></script>`
     
 (*) Nếu project chưa có thư viện FontAwesome (v4.7.0) thì phải khai báo thêm:
@@ -53,14 +54,14 @@ How to use:
 --------------------------------------------------------------------------------------
 ````
 var xlsx = new XLSX({
-    			fileName		:  ,
-    			pathToLib		:  ,
+    			fileName	:  ,
+    			pathToLib	:  ,
     			linkGetData 	:  ,
     			paramsFilter 	:  ,
-    			columnNames	 	:  ,
+    			columnNames	 :  ,
     			dataTemplate 	:  ,
     			xlsxTemplate	:  ,
-    			rowStyleReq		:
+    			rowStyleReq	:
     		});
 ````
 Tham số:
@@ -73,36 +74,83 @@ Tham số:
 7. `xlsxTemplate` : Template của file excel mẫu.
 8. `rowStyleReq` : Yêu cầu về style đối với từng dòng dữ liệu trong file excel.
 
-------------------------------------------------------------
 
-
-1. `filename`:
+filename
 -------------
-Tên file excel (*) không bao gồm đuôi file .xlsx
+Tên file excel (*) tên file không bao gồm đuôi file .xlsx
 
-2. `pathToLib`:
+pathToLib
 --------------
 Đường dẫn tới thư mục (thư mục cha) chứa `exportJS`. (*) đường dẫn không bao gồm `exportJS`
 
-3. `linkGetData`:
+linkGetData
 ----------------
 Đường dẫn đến controller lấy dữ liệu.
 
+paramsFilter
+-------------
+Các điều kiện lọc dữ liệu: kiểu Object:
 
+Ex :
 
-Program reviewed by the University of California, Riverside.
-------------------------------------------------------------
-Basic Overview of Command Shells: [HERE](http://linuxgazette.net/111/ramankutty.html)
+``
+paramsFilter = {
+    columnName_1 : 'filter value of column 1',
+    columnName_2 : 'filter value of column 2',
+    ...
+    columnName_n : 'filter value of column n',
+}
 
-This program is developed to write a simple command shell called "RShell."
+``
 
-- It will offer similarities such as the normal BASH Command shell.
+(*) Cách nhận `paramsFilter` trong controller PHP:
 
-- Execute the command of ls to a file (with given instructions above)
+    `$paramsFilter = $_REQUEST['paramsFilter'];`
+    
+`$paramsFilter` sẽ có các thuộc tính như đối tượng khai báo đầu vào. Tất cả các giá trị nhận được đều dưới dạng string
 
-- Can call all commands of BASH with execv function
+(*) Các tham số mặc định:
+ 1. page : trang dữ liệu cần lấy.
+ 2. pageSize : kích thước trang dữ liệu.
+ 
+ (*) Các tham số yêu cầu trả về:
+ 1. res : trạng thái lấy dữ liệu thành công hay thất bại.
+ 2. total : tổng số trang dữ liệu.
+ 3. data : dữ liệu của 1 trang.
+ 
+ Ex: (PHP code)
+ 
+ `` 
+            $ret        = (object)[];
+            $ret->res   = 1;
+            $ret->total = $total_page;
+            $ret->data  = array();
+ ``
 
-- Have special built in command "exit" to exit RSHELL and return to your local SHELL
+columnNames
+--------------
+Kiểu : `Array(string)`.
+
+Tên của các cột trong file excel.
+
+dataTemplate
+-------------
+Kiểu : `Array(string)`.
+
+Tên của các trường trong CSDL tương ứng với các cột `columnNames`.
+
+rowStyleReq
+------------
+
+Kiểu : `Object`
+
+Form : `{ definedInTheLastLine : boolean, keepData: boolean}`.
+
+1. Nếu trong tempalte file có định nghĩa style cho từng dòng dữ liệu ( VD : căn giữa/trái/phải , in nghiêng/Đậm, font chữ, ...) ở cuối thì tham số `definedInTheLastLine` = `true`. Yêu cầu phải có tham số đầu vào cho `xlsxTemplate`.
+2. Nếu muốn giữ lại dữ liệu dòng định nghĩa style thì tham số `keepData` = `true`.
+
+xlsxTemplate
+-------------
 
 
 Bugs
