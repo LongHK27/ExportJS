@@ -158,12 +158,13 @@ xlsxTemplate
 Ex : 
 
 `
-    var _rel 			= "";
-    var wb 				= "";
-    var sharedString 	= "";
-    var theme 			= "";
-    var styles 			= "";
-    var sheet_text 		= "";
+
+    var _rel = "";
+    var wb  = "";
+    var sharedString = "";
+    var theme = "";
+    var styles = "";
+    var sheet_text = "";
     
     var xlsxTemplate_1 = {
 		    	_rel 	: _rel,
