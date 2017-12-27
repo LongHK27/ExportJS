@@ -36,29 +36,58 @@ Getting started
 1. `./exportJS`         : Thư mục chứa thư viện.
 2. `./ExportJS-Tools`   : Thư mục chứa tool hỗ trợ tạo template của file excel mẫu - tạo tham số đầu vào cho hàm nếu file excel có cấu trúc style theo mẫu đã được định nghĩa.
 
-+, Clone / Download thư viện và copy thư mục `exportJS` vào project.
++ Clone / Download thư viện và copy thư mục `exportJS` vào project.
 
-+, Include vào project: import `export.js` file
++ Include vào project: import `export.js` file
 
     `<script type="text-javascript" src="path_to_exportJS_dir/export.js"></script>`
     
 Ex:
-
     `<script type="text-javascript" src="http://building-export.ex.com/assets/js/ExportJS/export.js"></script>`
     
-Once you have cloned the directory to your local machine, follow the directions below:
+(*) Nếu project chưa có thư viện FontAwesome (v4.7.0) thì phải khai báo thêm:
+
+    `<script src="https://use.fontawesome.com/2e1c1f0db0.js"></script>`
+    
+How to use:
 --------------------------------------------------------------------------------------
-1. `cd` into `rshell` directory
+````
+var xlsx = new XLSX({
+    			fileName		:  ,
+    			pathToLib		:  ,
+    			linkGetData 	:  ,
+    			paramsFilter 	:  ,
+    			columnNames	 	:  ,
+    			dataTemplate 	:  ,
+    			xlsxTemplate	:  ,
+    			rowStyleReq		:
+    		});
+````
+Tham số:
+1. `filename` : Tên file excel.
+2. `pathToLib` : đường dẫn tới thư mục (thư mục cha) chứa `exportJS`.
+3. `linkGetData` : đường dẫn lấy dữ liệu.
+4. `paramsFilter` : các điều kiện lọc dữ liệu.
+5. `columnNames` : Tên của các cột trong file excel.
+6. `dataTemplate` : Tên của các trường trong CSDL tương ứng với các cột `columnNames`.
+7. `xlsxTemplate` : Template của file excel mẫu.
+8. `rowStyleReq` : Yêu cầu về style đối với từng dòng dữ liệu trong file excel.
 
-2. Call `make`
+------------------------------------------------------------
 
-3. `cd` into `bin`
 
-4. Call `rshell`
+1. `filename`:
+-------------
+Tên file excel (*) không bao gồm đuôi file .xlsx
 
-5. Can do steps 3 & 4 by calling `bin/rshell`
+2. `pathToLib`:
+--------------
+Đường dẫn tới thư mục (thư mục cha) chứa `exportJS`. (*) đường dẫn không bao gồm `exportJS`
 
-RShell will now open up instead of BASH and you can execute almost all to nothing commands as included in the regular terminal.
+3. `linkGetData`:
+----------------
+Đường dẫn đến controller lấy dữ liệu.
+
 
 
 Program reviewed by the University of California, Riverside.
