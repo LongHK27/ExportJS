@@ -94,17 +94,13 @@ Các điều kiện lọc dữ liệu: kiểu Object:
 Ex :
 
 ``
-paramsFilter = {
 
-    columnName_1 : 'filter value of column 1',
-    
-    columnName_2 : 'filter value of column 2',
-    
-    ...
-    
-    columnName_n : 'filter value of column n',
-    
-}
+    paramsFilter = {
+        columnName_1 : 'filter value of column 1',
+        columnName_2 : 'filter value of column 2',
+        ...
+        columnName_n : 'filter value of column n',
+    }
 
 ``
 
@@ -125,13 +121,11 @@ paramsFilter = {
  
  Ex: (PHP code)
  
- `` 
+ ``
+ 
             $ret        = (object)[];
-            
             $ret->res   = 1;
-            
-            $ret->total = $total_page;
-            
+            $ret->total = $total_page; 
             $ret->data  = array();
             
  ``
