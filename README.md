@@ -33,14 +33,17 @@ README.md
 
 Getting started
 ---------------
-1. `./exportJS` : Thư mục chứa thư viện. 
-2. `./ExportJS-Tools` : Thư mục chứa tool hỗ trợ tạo template của file excel mẫu - tạo tham số đầu vào cho hàm nếu file excel có cấu trúc style theo mẫu đã được định nghĩa.
+1. `./exportJS`         : Thư mục chứa thư viện.
+2. `./ExportJS-Tools`   : Thư mục chứa tool hỗ trợ tạo template của file excel mẫu - tạo tham số đầu vào cho hàm nếu file excel có cấu trúc style theo mẫu đã được định nghĩa.
 
->> Clone / Download thư viện và copy thư mục `exportJS` vào project.
->> Include vào project: import `export.js` file
++, Clone / Download thư viện và copy thư mục `exportJS` vào project.
+
++, Include vào project: import `export.js` file
 
     `<script type="text-javascript" src="path_to_exportJS_dir/export.js"></script>`
+    
 Ex:
+
     `<script type="text-javascript" src="http://building-export.ex.com/assets/js/ExportJS/export.js"></script>`
     
 Once you have cloned the directory to your local machine, follow the directions below:
