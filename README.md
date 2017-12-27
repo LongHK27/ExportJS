@@ -52,7 +52,7 @@ Ex:
     
 How to use:
 --------------------------------------------------------------------------------------
-````
+`
 var xlsx = new XLSX({
     			fileName	:  ,
     			pathToLib	:  ,
@@ -63,7 +63,7 @@ var xlsx = new XLSX({
     			xlsxTemplate	:  ,
     			rowStyleReq	:
     		});
-````
+`
 Tham số:
 1. `filename` : Tên file excel.
 2. `pathToLib` : đường dẫn tới thư mục (thư mục cha) chứa `exportJS`.
@@ -93,7 +93,7 @@ Các điều kiện lọc dữ liệu: kiểu Object:
 
 Ex :
 
-``
+`
     paramsFilter = {
         columnName_1 : 'filter value of column 1',
         columnName_2 : 'filter value of column 2',
@@ -101,7 +101,7 @@ Ex :
         columnName_n : 'filter value of column n',
     }
 
-``
+`
 
 (*) Cách nhận `paramsFilter` trong controller (PHP code):
 
@@ -120,13 +120,13 @@ Ex :
  
  Ex: (PHP code)
  
- `
+ ``
             $ret        = (object)[];
             $ret->res   = 1;
             $ret->total = $total_page; 
             $ret->data  = array();
           
- `
+ ``
 
 columnNames
 --------------
@@ -182,6 +182,17 @@ Ex :
     		});
             
 `
+Chạy file `index.html` trong thư mục `ExportJS-Tools`:
+1. Chọn file excel mẫu.
+2. Copy kết quả (Đừng ấn nút `copy`).
+
+System Requie
+-------------
+
+Browser support : Worker, ES6
+
+Chạy tốt nhất trên UC Desktop.
+
 
 Bugs
 ---
