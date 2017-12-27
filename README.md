@@ -1,11 +1,9 @@
 # ExportJS
-==========
 
 Licensing Information: READ LICENSE
----
 Project source can be downloaded from https://github.com/LongHK27/ExportJS.git
-----
 
+-----------
 Author & Contributor List
 -----------
 Hoang Long - LongHK
