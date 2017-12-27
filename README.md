@@ -94,7 +94,6 @@ Các điều kiện lọc dữ liệu: kiểu Object:
 Ex :
 
 ``
-
     paramsFilter = {
         columnName_1 : 'filter value of column 1',
         columnName_2 : 'filter value of column 2',
@@ -104,7 +103,7 @@ Ex :
 
 ``
 
-(*) Cách nhận `paramsFilter` trong controller PHP:
+(*) Cách nhận `paramsFilter` trong controller (PHP code):
 
     `$paramsFilter = $_REQUEST['paramsFilter'];`
     
@@ -121,14 +120,13 @@ Ex :
  
  Ex: (PHP code)
  
- ``
- 
+ `
             $ret        = (object)[];
             $ret->res   = 1;
             $ret->total = $total_page; 
             $ret->data  = array();
-            
- ``
+          
+ `
 
 columnNames
 --------------
@@ -155,6 +153,34 @@ Form : `{ definedInTheLastLine : boolean, keepData: boolean}`.
 xlsxTemplate
 -------------
 
+Định nghĩa mẫu file excel:
+
+Ex : 
+
+`
+    var _rel 			= "";
+    var wb 				= "";
+    var sharedString 	= "";
+    var theme 			= "";
+    var styles 			= "";
+    var sheet_text 		= "";
+    
+    var xlsxTemplate_1 = {
+		    	_rel 	: _rel,
+		    	sheet  	: sheet_text,
+		    	sharedString : sharedString,
+		    	styles	: styles,
+		    	theme 	: theme,
+		    	workbook : wb
+		    };
+            
+    let xlsx = new XLSX({
+    			...
+    			xlsxTemplate	: xlsxTemplate_1,
+                ...
+    		});
+            
+`
 
 Bugs
 ---
