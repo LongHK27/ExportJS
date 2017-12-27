@@ -52,7 +52,7 @@ Ex:
     
 How to use:
 --------------------------------------------------------------------------------------
-`
+``
 var xlsx = new XLSX({
     			fileName	:  ,
     			pathToLib	:  ,
@@ -63,7 +63,7 @@ var xlsx = new XLSX({
     			xlsxTemplate	:  ,
     			rowStyleReq	:
     		});
-`
+``
 Tham số:
 1. `filename` : Tên file excel.
 2. `pathToLib` : đường dẫn tới thư mục (thư mục cha) chứa `exportJS`.
