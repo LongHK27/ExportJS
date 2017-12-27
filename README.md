@@ -53,16 +53,18 @@ Ex:
 How to use:
 --------------------------------------------------------------------------------------
 ``
-var xlsx = new XLSX({
-    			fileName	:  ,
-    			pathToLib	:  ,
-    			linkGetData 	:  ,
-    			paramsFilter 	:  ,
-    			columnNames	 : ,
-    			dataTemplate 	:  ,
-    			xlsxTemplate	:  ,
-    			rowStyleReq	:
-    		});
+
+	var xlsx = new XLSX({
+				fileName	:  ,
+				pathToLib	:  ,
+				linkGetData 	:  ,
+				paramsFilter 	:  ,
+				columnNames	 : ,
+				dataTemplate 	:  ,
+				xlsxTemplate	:  ,
+				rowStyleReq	:
+			});
+			
 ``
 Tham số:
 1. `filename` : Tên file excel.
