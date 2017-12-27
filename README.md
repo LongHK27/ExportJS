@@ -58,7 +58,7 @@ var xlsx = new XLSX({
     			pathToLib	:  ,
     			linkGetData 	:  ,
     			paramsFilter 	:  ,
-    			columnNames	 :  ,
+    			columnNames	 : ,
     			dataTemplate 	:  ,
     			xlsxTemplate	:  ,
     			rowStyleReq	:
@@ -95,10 +95,15 @@ Ex :
 
 ``
 paramsFilter = {
+
     columnName_1 : 'filter value of column 1',
+    
     columnName_2 : 'filter value of column 2',
+    
     ...
+    
     columnName_n : 'filter value of column n',
+    
 }
 
 ``
@@ -122,9 +127,13 @@ paramsFilter = {
  
  `` 
             $ret        = (object)[];
+            
             $ret->res   = 1;
+            
             $ret->total = $total_page;
+            
             $ret->data  = array();
+            
  ``
 
 columnNames
